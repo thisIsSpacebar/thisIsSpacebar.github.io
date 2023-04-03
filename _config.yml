@@ -1,0 +1,16 @@
+---
+title: iamroot
+
+exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md', '/CONTRIBUTING.md']
+
+permalink: pretty
+
+collections:
+  iamroot:
+    output: true
+
+defaults:
+  - scope:
+      path: '_iamroot'
+    values:
+      layout: permission

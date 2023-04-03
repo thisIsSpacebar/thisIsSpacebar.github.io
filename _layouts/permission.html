@@ -1,0 +1,35 @@
+---
+layout: common
+---
+
+{% capture permission_name %}{% include get_permission_name path=page.path %}{% endcapture %}
+
+{% include page_title.html title=permission_name %}
+
+{{ page.description | markdownify }}
+
+{% for detail_pair in site.data.details %}
+{% assign detail_id = detail_pair[0] %}
+{% assign detail = detail_pair[1] %}
+{% assign contents = page.details[detail_id] %}
+{% unless contents %}{% continue %}{% endunless %}
+
+<h2 id="{{ detail_id }}" class="detail-name">{{- detail.label -}}</h2>
+{{ detail.description | markdownify }}
+
+<ul class="content">
+    {% for content in contents %}
+
+{% capture code %}
+{{ content.code | escape }}
+{% endcapture %}
+
+    <li>
+        {{ content.description | markdownify }}
+        <pre><code>{{- code | strip -}}</code></pre>
+    </li>
+
+    {% endfor %}
+</ul>
+
+{% endfor %}

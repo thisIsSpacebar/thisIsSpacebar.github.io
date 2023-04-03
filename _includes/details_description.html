@@ -1,0 +1,7 @@
+<dl>
+    {% for detail_pair in site.data.details %}
+    {% assign detail = detail_pair[1] %}
+    <dt class="detail-name">{{ detail.label }}</dt>
+    <dd>{{ detail.description | markdownify }}</dd>
+    {% endfor %}
+</dl>

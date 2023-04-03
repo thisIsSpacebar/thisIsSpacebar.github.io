@@ -1,0 +1,34 @@
+---
+# this is the rendering order of details
+
+AWS-CLI-command:
+  label: AWS CLI Command
+  description: |
+    This is the command to run on an authenticated AWS CLI session to escalate privileges. 
+
+    **{Variables}** must be replaced with values appropriate to your environment.
+
+required-privileges:
+  label: Required Additional Privileges
+  description: |
+    These are additional privileges that are **required** in order for the escalation command to work. 
+
+    This does not include the permissions required to discover potential targets or variable names, only the bare minimum for sucessful command execution.
+
+required-configurations:
+  label: Required Configurations
+  description: |
+    These are the required conditions in the environment to sucessfully escalate. 
+
+    This may include, but is not limited to, things such as policies attached to your user, or an existing role with a trust policy that allows for its use with a Lambda function.
+
+useful-privileges:
+  label: Useful Additional Privileges
+  description: |
+    These are permissions that make completing the escalation command significantly easier. Permissions here will help fill in variables within the above escalation command, they are not **required** for it to work, and do not provide any benefit in determining 
+
+    Permissions such as **iam:ListUsers**, **iam:ListRoles**, **iam:ListPolicies**, **iam:ListAttachedUserPolicies**, **iam:ListAttachedRolePolicies**, and **iam:GetPolicy** are useful across most escalations in order to help determine the permissions your current session is executing with and the potential permissions that could be gained from other users/roles/policies.
+
+sources:
+  label: Sources
+  description: With thanks to the following people/pages.
