@@ -6,7 +6,7 @@ exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md', '/CONTRIBUTING.md']
 permalink: pretty
 
 collections:
-  awscalate:
+  escalations:
     output: true
 
 defaults:
