@@ -23,7 +23,7 @@ details:
             iam:GetPolicy
             lambda:ListFunctions
             lambda:GetFunction
-    sources:
+    submitted-by:
         - code: |
             Lucas Fedyniak-Hopes
 ---

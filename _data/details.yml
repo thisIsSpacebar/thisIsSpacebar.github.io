@@ -20,15 +20,19 @@ required-configurations:
   description: |
     These are the required conditions in the environment to sucessfully escalate. 
 
-    This may include, but is not limited to, things such as policies attached to your user, or an existing role with a trust policy that allows for its use with a Lambda function.
+    This may include, but is not limited to, things such as policies attached to your user, or an existing role with a trust policy that allows for its use with a specific resource.
 
 useful-privileges:
   label: Useful Additional Privileges
   description: |
-    These are permissions that make completing the escalation command significantly easier. Permissions here will help fill in variables within the above escalation command, they are not **required** for it to work, and do not provide any benefit in determining 
+    These are permissions that make completing the escalation command significantly easier. Permissions here will help fill in variables within the above escalation command, they are not **required** for it to work. 
 
-    Permissions such as **iam:ListUsers**, **iam:ListRoles**, **iam:ListPolicies**, **iam:ListAttachedUserPolicies**, **iam:ListAttachedRolePolicies**, and **iam:GetPolicy** are useful across most escalations in order to help determine the permissions your current session is executing with and the potential permissions that could be gained from other users/roles/policies.
+    Permissions such as **iam:ListUsers**, **iam:ListRoles**, **iam:ListPolicies**, **iam:ListAttachedUserPolicies**, **iam:ListAttachedRolePolicies**, **iam:GetRole** and **iam:GetPolicy** are useful across most escalations in order to help determine the permissions your current session is executing with and the potential permissions that could be gained from other users/roles/policies.
 
 sources:
   label: Sources
-  description: With thanks to the following people/pages.
+  description: Relevant sources provided by the submitter.
+
+submitted-by:
+  label: Submitted by
+  description:

@@ -1,5 +1,5 @@
 <div id="permission-search-wrapper">
-    <input id="permission-search" type="text" placeholder="Search among {{ site.iamroot | size }} permissions..."/>
+    <input id="permission-search" type="text" placeholder="Search among {{ site.escalations | size }} permissions..."/>
 </div>
 
 <div id="permission-table-wrapper">
@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for file in site.iamroot %}
+            {% for file in site.escalations %}
             <tr>
                 <td><a href="{{ file.url }}" class="permission-name">{% include get_permission_name path=file.path %}</a></td>
                 {% assign start = '[{"code"=>"' %}

@@ -1,16 +1,16 @@
 ---
-title: iamroot
+title: awscalate
 
 exclude: ['/scripts', '/Gemfile', '/Makefile', '/README.md', '/CONTRIBUTING.md']
 
 permalink: pretty
 
 collections:
-  iamroot:
+  awscalate:
     output: true
 
 defaults:
   - scope:
-      path: '_iamroot'
+      path: '_escalations'
     values:
       layout: permission

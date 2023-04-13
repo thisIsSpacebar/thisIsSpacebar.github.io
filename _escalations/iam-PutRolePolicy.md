@@ -19,4 +19,7 @@ details:
     sources:
         - code: |
             https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/
+    submitted-by:
+        - code: |
+            Lucas Fedyniak-Hopes
 ---
